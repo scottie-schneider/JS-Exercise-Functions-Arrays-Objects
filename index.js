@@ -220,8 +220,20 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(inventory) {
   /* code here */
+  let years = [];
+  // below code works if we don't want to needlessly repeat car years. Stupid tests!
+  // inventory.map(car => {
+  //   // if years has the car year, don't push it
+  //   if(years.includes(car.car_year)){
+  //     return      
+  //   }
+  //   // otherwise, push that year to the array!
+  //   years.push(car.car_year)
+  // })
+  inventory.map(car => years.push(car.car_year))
+  return years
 }
 
 /**
