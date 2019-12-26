@@ -95,9 +95,6 @@ function makeSmartPerson(name) {
 }
 
 
-
-
-
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -154,6 +151,12 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  let place = index;
+  const car = inventory.find((item, index) => {
+    return index ===  place 
+  })
+  console.log(car)
+  return `The car is a ${car.car_make} ${car.car_model}`
 }
 
 /**
