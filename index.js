@@ -273,8 +273,19 @@ function getOlderCars(inventory, max_year) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  let cars = []
+  inventory.map(car => {
+    const german = ["Audi", "Mercedes-Benz", "Volkswagen", "BMW"];
+    // if car year is == to one of the german makes, push it to the cars array
+    if(german.includes(car.car_make)){
+      cars.push(car)
+    }
+    // otherwise, do nothing
+    return;
+  })
+  return cars;
 }
 
 /**
