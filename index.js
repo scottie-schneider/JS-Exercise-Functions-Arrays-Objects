@@ -41,11 +41,12 @@ function addNumbers(num1, num2) {
 */
 function makePersonObject(id, name, email) {
   /* code here */
-  return scottie = {
+  const scottie = {
     id,
     name,
     email
   }
+  return scottie
 }
 
 /**
@@ -79,8 +80,18 @@ function getName(person) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+  const scott = {
+    name,
+    sum(num1, num2) {
+      return num1 + num2
+    },
+    speak() {
+      return `Hello, my name is ${this.name}`
+    }
+  }
+  return scott;
 }
 
 
